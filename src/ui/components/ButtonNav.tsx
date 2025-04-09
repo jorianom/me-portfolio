@@ -21,8 +21,8 @@ export const ButtonNav = () => {
 
     return (
         <div ref={menuRef} className="flex border text-white rounded-lg py-2 uppercase">
-            <div className="flex flex-1 justify-end">
-                <ul className="flex-col justify-center text-right">
+            <div className="flex w-full justify-center">
+                <ul className="flex-col text-right gap-1">
                     <li>
                         <Link onClick={() => setIsOpen(false)} className="" href="/">About</Link>
                     </li>
@@ -40,7 +40,7 @@ export const ButtonNav = () => {
                     }
                 </ul>
             </div>
-            <div className="flex flex-1 justify-end">
+            <div className="flex justify-end">
                 <button onClick={() => setIsOpen(!isOpen)} className="px-3 sm:p-0">
                     {
                         !isOpen ? <IoMenu className="h-6 w-6" /> : <IoClose className="h-6 w-6" />
