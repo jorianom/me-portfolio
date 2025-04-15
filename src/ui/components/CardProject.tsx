@@ -11,10 +11,10 @@ type CardProjectProps = {
     item: Project,
     image?: string
 }
-export const CardProject = ({ index, total, item, image }: CardProjectProps) => {
-    let isOdd = index % 2 != 0;
-    let isFirst = index == 1;
-    let isLast = index == total;
+export const CardProject = ({ index, total, item }: CardProjectProps) => {
+    const isOdd = index % 2 != 0;
+    const isFirst = index == 1;
+    const isLast = index == total;
 
     const styleCardImage = `border-2 border-l-0 border-b-0  aspect-square ${isFirst ? 'border-y-0 rounded-tr-sm' : ''} ${isLast ? 'rounded-lr-sm' : ''}`
     const styleCardDiv = `relative flex w-full items-end border-2 border-l-0 border-b-0 aspect-square ${isFirst ? 'border-y-0 rounded-tl-sm' : ''} ${isLast ? 'rounded-bl-sm' : ''}`

@@ -4,16 +4,6 @@ import { BiLogoPostgresql } from "react-icons/bi";
 import { FaAws, FaCss3, FaGitAlt, FaHtml5, FaNode, FaReact, FaSquareGithub } from "react-icons/fa6";
 import { RiJavascriptFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 
-const links = [
-    "Behance",
-    "Dribbble",
-    "Strabe.",
-    "Awwwards",
-    "Inspo",
-    "Pinterest",
-    "Instagram",
-    "Twitter",
-];
 const skills = [
     // --- FRONTEND ---
     { label: "HTML", icon: <FaHtml5 className="h-5 w-5 text-orange-500" /> },
