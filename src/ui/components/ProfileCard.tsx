@@ -2,12 +2,12 @@ import Image from "next/image"
 import { FaRegCopy } from "react-icons/fa"
 import { ButtonIcon } from "./buttons/ButtonIcon"
 import { SocialList } from "./buttons/SocialList"
-import { FaCircle, FaCode, FaRegCircle } from "react-icons/fa6"
+import { FaCircle, FaCode } from "react-icons/fa6"
 
 export const ProfileCard = () => {
 
     return (
-        <div className="flex flex-col-reverse sm:flex-row border rounded-md text-white">
+        <div className="flex flex-col-reverse sm:flex-row border rounded-md text-white mx-5">
             <div className="flex-1 p-3 pl-5">
                 <div className="flex flex-col items-center sm:items-start">
                     <div className="">
@@ -30,12 +30,6 @@ export const ProfileCard = () => {
             </div>
             <div className="flex-1 p-3 pl-5">
                 <div className="flex flex-col items-center justify-center">
-                    <div className="flex w-full justify-end ">
-                        <div className="flex align-center items-center border rounded-full shadow-sm">
-                            <span className="pl-2"><FaCircle className="w-4 h-4 text-green-500" /></span>
-                            <span className="px-2">Disponibilidad inmediata</span>
-                        </div>
-                    </div>
                     <Image
                         className="m-2 max-w-sm rounded-full shadow-sm"
                         src={'/profile.jpg'}
@@ -44,6 +38,12 @@ export const ProfileCard = () => {
                         alt="Profile"
                         objectFit="cover"
                     />
+                    <div className="flex w-full justify-end ">
+                        <div className="flex align-center items-center border rounded-full shadow-sm">
+                            <span className="pl-2"><FaCircle className="w-4 h-4 text-green-500" /></span>
+                            <span className="px-2">Disponibilidad inmediata</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

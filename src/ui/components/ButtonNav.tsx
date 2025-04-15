@@ -30,7 +30,7 @@ export const ButtonNav = () => {
                         isOpen && (
                             <>
                                 <li>
-                                    <Link onClick={() => setIsOpen(false)} href="/">Projects</Link>
+                                    <Link onClick={() => setIsOpen(false)} href="#projects">Projects</Link>
                                 </li>
                                 <li>
                                     <Link onClick={() => setIsOpen(false)} href='/'>Contacts</Link>
