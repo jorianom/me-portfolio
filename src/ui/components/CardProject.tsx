@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { basePath } from "../../../next.config"
 
 type Project = {
     title: string,
@@ -30,7 +31,7 @@ export const CardProject = ({ index, total, item }: CardProjectProps) => {
                     <div className={styleCardImage}>
                         <Image
                             className="w-full h-full"
-                            src={'/project_' + index + '.png'}
+                            src={basePath + '/project_' + index + '.png'}
                             width={200}
                             height={200}
                             alt="Profile"
@@ -42,7 +43,7 @@ export const CardProject = ({ index, total, item }: CardProjectProps) => {
                     <div className={styleCardImage}>
                         <Image
                             className="w-full h-full"
-                            src={'/project_' + index + '.png'}
+                            src={basePath + '/project_' + index + '.png'}
                             width={200}
                             height={200}
                             alt="Profile"

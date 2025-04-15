@@ -3,6 +3,7 @@ import { FaRegCopy } from "react-icons/fa"
 import { ButtonIcon } from "./buttons/ButtonIcon"
 import { SocialList } from "./buttons/SocialList"
 import { FaCircle, FaCode } from "react-icons/fa6"
+import { basePath } from "../../../next.config"
 
 export const ProfileCard = () => {
 
@@ -32,7 +33,7 @@ export const ProfileCard = () => {
                 <div className="flex flex-col items-center justify-center">
                     <Image
                         className="m-2 max-w-sm rounded-full shadow-sm"
-                        src={'/profile.jpg'}
+                        src={basePath + '/profile.jpg'}
                         width={200}
                         height={200}
                         alt="Profile"
