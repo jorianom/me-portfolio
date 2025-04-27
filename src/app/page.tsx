@@ -5,7 +5,7 @@ import { Footer } from "@/ui/components/Footer";
 
 export default function Home() {
   return (
-    <div className="">
+    <div className="px-5">
       <Navbar />
       <ProfileCard />
       <Projects />

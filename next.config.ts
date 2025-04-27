@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 export const basePath = process.env.NODE_ENV === 'production' ? '/me-portfolio' : '';
 
 const nextConfig: NextConfig = {
-  output: 'export',
+  // output: 'export',
   basePath: basePath,
 };
 

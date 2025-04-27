@@ -1,14 +1,15 @@
 import Image from "next/image"
-import { FaRegCopy } from "react-icons/fa"
+// import { FaRegCopy } from "react-icons/fa"
 import { ButtonIcon } from "./buttons/ButtonIcon"
 import { SocialList } from "./buttons/SocialList"
 import { FaCircle, FaCode } from "react-icons/fa6"
 import { basePath } from "../../../next.config"
+import { RiUserFollowFill } from "react-icons/ri"
 
 export const ProfileCard = () => {
 
     return (
-        <div className="flex flex-col-reverse sm:flex-row border rounded-md text-white mx-5">
+        <div className="bg-back-inv border-secondary flex flex-col-reverse sm:flex-row border rounded-md text-white">
             <div className="flex-1 p-3 pl-5">
                 <div className="flex flex-col items-center sm:items-start">
                     <div className="">
@@ -16,24 +17,24 @@ export const ProfileCard = () => {
                         <h1 className="font-bold pt-3 uppercase">
                             John Jairo Riaño Martinez
                         </h1>
-                        <p className="text-justify sm:text-left text-sm max-w-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                            Quidem, amet accusantium voluptate necessitatibus quod tempore.
+                        <p className="text-justify text-sm">Soy estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia, con experiencia en desarrollo web back-end utilizando Node.js y bases de datos no relacionales como MongoDB. También manejo tecnologías front-end como React y Next.js.
+                            Mi objetivo es seguir creciendo profesionalmente, enfrentando nuevos retos y fortaleciendo mis habilidades con un enfoque analítico y orientado a soluciones.
                         </p>
                         <SocialList />
                     </div>
                     <div className="py-2"></div>
-                    <div className="flex items-center">
-                        <ButtonIcon label="Conectemos" style="bg-blue-500 hover:bg-blue-700 text-white" />
-                        <div className="px-3"></div>
-                        <ButtonIcon label="Copiar Email" style="bg-gray-500 hover:bg-gray-700 text-white" icon={FaRegCopy} colorIcon="white" />
+                    <div className="flex w-full justify-center items-center">
+                        <ButtonIcon icon={RiUserFollowFill} label="Conectemos" style="bg-accent hover:bg-secondary text-white" />
+                        {/* <div className="px-3"></div>
+                        <ButtonIcon label="Copiar Email" style="bg-gray-500 hover:bg-gray-700 text-white" icon={FaRegCopy} colorIcon="white" /> */}
                     </div>
                 </div>
             </div>
             <div className="flex-1 p-3 pl-5">
                 <div className="flex flex-col items-center justify-center">
                     <Image
-                        className="m-2 max-w-sm rounded-full shadow-sm"
-                        src={basePath + '/profile.jpg'}
+                        className="m-2 rounded-full shadow-md max-w-sm"
+                        src={basePath + '/photo.webp'}
                         width={200}
                         height={200}
                         alt="Profile"

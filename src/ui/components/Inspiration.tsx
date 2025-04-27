@@ -32,7 +32,7 @@ const skills = [
 
 export const Inspiration = () => {
     return (
-        <div className="relative w-full h-screen overflow-visible">
+        <div className="hidden md:block relative w-full h-[300px] sm:h-screen overflow-visible">
             <svg
                 className="absolute w-full h-full left-0 -translate-x-1/2"
                 viewBox="0 0 100 100"
@@ -44,9 +44,9 @@ export const Inspiration = () => {
                 <circle cx="50" cy="50" r="60" stroke="#ccc" strokeWidth="0.5" fill="none" />
             </svg>
             <h2 className="flex h-full text-lg max-w-[30%] px-2 absolute items-center text-white">Herramientas y tecnologías</h2>
-            <div className="relative w-full h-full">
+            <div className="relative w-full h-full flex justify-center items-center">
                 {/* <svg className="absolute top-0 left-0 w-full h-full">...</svg> */}
-                <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-[140px] text-black">
+                <div className="absolute text-black">
                     <ul className="p-2">
                         {
                             skills.map((item) => (

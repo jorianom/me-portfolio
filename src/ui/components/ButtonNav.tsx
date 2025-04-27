@@ -20,20 +20,20 @@ export const ButtonNav = () => {
     }, [])
 
     return (
-        <div ref={menuRef} className="flex border text-white rounded-lg py-2 uppercase">
+        <div ref={menuRef} className="flex border border-secondary text-white rounded-lg py-2 uppercase">
             <div className="flex w-full justify-center">
                 <ul className="flex-col text-right gap-1">
                     <li>
-                        <Link onClick={() => setIsOpen(false)} className="" href="/">About</Link>
+                        <Link onClick={() => setIsOpen(false)} className="" href="/">Sobre Mi</Link>
                     </li>
                     {
                         isOpen && (
                             <>
                                 <li>
-                                    <Link onClick={() => setIsOpen(false)} href="#projects">Projects</Link>
+                                    <Link onClick={() => setIsOpen(false)} href="#projects">Proyectos</Link>
                                 </li>
                                 <li>
-                                    <Link onClick={() => setIsOpen(false)} href='/'>Contacts</Link>
+                                    <Link onClick={() => setIsOpen(false)} href='/'>Contactame</Link>
                                 </li>
                             </>
                         )
