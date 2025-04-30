@@ -30,16 +30,17 @@ export const ProfileCard = () => {
                     </div>
                 </div>
             </div>
-            <div className="flex-1 p-3 pl-5">
+            <div className="relative flex-1 p-3 pl-5">
                 <div className="flex flex-col items-center justify-center">
-                    <Image
-                        className="m-2 rounded-full shadow-md max-w-sm"
-                        src={basePath + '/photo.webp'}
-                        width={200}
-                        height={200}
-                        alt="Profile"
-                        objectFit="cover"
-                    />
+                    <div className="relative w-48 h-48 sm:w-64 sm:h-64 m-2 rounded-full shadow-md overflow-hidden">
+                        <Image
+                            src={basePath + '/photo.webp'}
+                            fill
+                            priority 
+                            className="object-cover"
+                            alt="Foto de John Jairo Riaño, desarrollador back-end y full stack"
+                        />
+                    </div>
                     <div className="flex w-full justify-end ">
                         <div className="flex align-center items-center border rounded-full shadow-sm">
                             <span className="pl-2"><FaCircle className="w-4 h-4 text-green-500" /></span>

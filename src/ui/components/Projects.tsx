@@ -58,7 +58,7 @@ export const Projects = () => {
                             Te invito a descubrir más en mi <a className="underline text-secondary" target="_blank" href="https://github.com/jorianom">GitHub</a>.</p>
                     </div>
                 </div>
-                <div className="w-full sm:w-1/2 grid grid-cols-2 h-screen overflow-auto border border-secondary rounded-sm scrollbar-thin">
+                <div className="w-full sm:w-1/2 grid grid-cols-2 max-h-screen overflow-auto border border-secondary rounded-sm scrollbar-thin">
                     {project.map((item, index) => {
                         const uniqueKey = `project-${index}`;
                         return <CardProject item={item} key={uniqueKey} index={index + 1} total={number} image="project" />;

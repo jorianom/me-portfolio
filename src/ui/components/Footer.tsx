@@ -1,7 +1,6 @@
 import { PiGithubLogoLight, PiWhatsappLogoLight } from "react-icons/pi"
 
 export const Footer = () => {
-
     return (
         <div className="flex flex-col p-5 items-center justify-center text-white">
             <hr className="px-1 w-full pt-3 border-secondary" />

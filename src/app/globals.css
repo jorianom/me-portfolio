@@ -8,7 +8,7 @@
 	--color-primary: #1b1b1b;
 	--color-secondary: #e63e21;
 	--color-bg-light: #4728f8;
-	--color-accent: #E4643F;
+	--color-accent: #e4643f;
 	--color-primary_hover: #4728f8;
 	--color-dark: #4728f8;
 	--color-text-dark: #0f172a;
@@ -54,6 +54,14 @@ body {
 		rgba(139, 46, 30, 1) 25%,
 		rgba(52, 31, 28, 1) 50%,
 		rgba(27, 27, 27, 1) 100%
+	);
+}
+.bg-lineal {
+	background: #e63e21;
+	background: linear-gradient(
+		45deg,
+		rgba(230, 62, 33, 1) 50%,
+		rgba(113, 42, 30, 1) 90%
 	);
 }
 
