@@ -1,54 +1,68 @@
 import Image from "next/image"
-// import { FaRegCopy } from "react-icons/fa"
-import { ButtonIcon } from "./buttons/ButtonIcon"
 import { SocialList } from "./buttons/SocialList"
-import { FaCircle, FaCode } from "react-icons/fa6"
+import { AvailabilityBadge } from "./AvailabilityBadge"
 import { basePath } from "../../../next.config"
-import { RiUserFollowFill } from "react-icons/ri"
+import Link from "next/link"
 
 export const ProfileCard = () => {
-
     return (
-        <div className="bg-back-inv border-secondary flex flex-col-reverse sm:flex-row border rounded-md text-white">
-            <div className="flex-1 p-3 pl-5">
-                <div className="flex flex-col items-center sm:items-start">
-                    <div className="">
-                        <span className="flex w-full justify-center sm:justify-start italic"><FaCode className="mx-2 w-6 h-6" /> Software Developer</span>
-                        <h1 className="font-bold pt-3 uppercase">
-                            John Jairo Riaño Martinez
-                        </h1>
-                        <p className="text-justify text-sm">Soy estudiante de Ingeniería de Sistemas en la Universidad Nacional de Colombia, con experiencia en desarrollo web back-end utilizando Node.js y bases de datos no relacionales como MongoDB. También manejo tecnologías front-end como React y Next.js.
-                            Mi objetivo es seguir creciendo profesionalmente, enfrentando nuevos retos y fortaleciendo mis habilidades con un enfoque analítico y orientado a soluciones.
-                        </p>
-                        <SocialList />
-                    </div>
-                    <div className="py-2"></div>
-                    <div className="flex w-full justify-center items-center">
-                        <ButtonIcon icon={RiUserFollowFill} label="Conectemos" style="bg-accent hover:bg-secondary text-white" />
-                        {/* <div className="px-3"></div>
-                        <ButtonIcon label="Copiar Email" style="bg-gray-500 hover:bg-gray-700 text-white" icon={FaRegCopy} colorIcon="white" /> */}
+        <section className="relative py-10 sm:py-16 lg:py-20 bg-surface rounded-3xl border border-white/5 shadow-2xl my-6 overflow-hidden">
+            <div className="flex flex-col-reverse sm:grid sm:grid-cols-12 gap-8 sm:gap-10 lg:gap-12 items-center px-6 sm:px-8 lg:px-12">
+                {/* Left: Text content */}
+                <div className="sm:col-span-7 flex flex-col items-center sm:items-start gap-5 sm:gap-6">
+                    {/* Availability badge */}
+                    <AvailabilityBadge />
+
+                    {/* Headline */}
+                    <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tighter leading-tight text-white text-center sm:text-left">
+                        Construyo productos digitales <br className="hidden sm:block" />
+                        <span className="text-primary">de principio a fin.</span>
+                    </h1>
+
+                    {/* Description */}
+                    <p className="text-slate-300 max-w-2xl text-sm lg:text-base leading-relaxed font-medium text-center sm:text-left">
+                        Diseño y desarrollo aplicaciones web completas — desde la arquitectura
+                        hasta el despliegue. Trabajo con Node.js, React, Next.js, MongoDB y PostgreSQL
+                        para convertir ideas en productos funcionales, escalables y listos para producción.
+                    </p>
+
+                    {/* Social icons */}
+                    <SocialList />
+
+                    {/* CTA Buttons */}
+                    <div className="flex flex-wrap justify-center sm:justify-start gap-4">
+                        <Link
+                            href="#projects"
+                            className="inline-flex items-center gap-3 rounded-full bg-primary px-8 py-3 font-bold text-white transition-transform hover:scale-105 shadow-lg shadow-primary/20"
+                        >
+                            Ver Proyectos
+                        </Link>
+                        <Link
+                            href="https://www.linkedin.com/in/jorianom/"
+                            target="_blank"
+                            className="inline-flex items-center gap-3 rounded-full border border-white/20 px-8 py-3 font-bold text-white transition-all hover:bg-white/5"
+                        >
+                            Conectemos
+                        </Link>
                     </div>
                 </div>
-            </div>
-            <div className="relative flex-1 p-3 pl-5">
-                <div className="flex flex-col items-center justify-center">
-                    <div className="relative w-48 h-48 sm:w-64 sm:h-64 m-2 rounded-full shadow-md overflow-hidden">
-                        <Image
-                            src={basePath + '/photo.webp'}
-                            fill
-                            priority 
-                            className="object-cover"
-                            alt="Foto de John Jairo Riaño, desarrollador back-end y full stack"
-                        />
-                    </div>
-                    <div className="flex w-full justify-end ">
-                        <div className="flex align-center items-center border rounded-full shadow-sm">
-                            <span className="pl-2"><FaCircle className="w-4 h-4 text-green-500" /></span>
-                            <span className="px-2">Disponibilidad inmediata</span>
+
+                {/* Right: Photo */}
+                <div className="sm:col-span-5 flex flex-col items-center sm:justify-center lg:justify-end">
+                    <div className="relative">
+                        <div className="relative h-48 w-48 sm:h-64 sm:w-64 lg:h-80 lg:w-80 overflow-hidden rounded-full border-4 border-white/10 shadow-2xl bg-slate-800">
+                            <Image
+                                src={basePath + "/photo_.webp"}
+                                fill
+                                sizes="(max-width: 640px) 192px, (max-width: 1024px) 256px, 320px"
+                                priority
+                                className="object-cover"
+                                alt="Foto de John Jairo Riaño, desarrollador full stack"
+                            />
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }

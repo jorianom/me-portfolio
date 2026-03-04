@@ -8,16 +8,14 @@ const listSocial = [
 ]
 export const SocialList = () => {
     return (
-        <ul className="flex w-full justify-center gap-4 p-2">
+        <div className="flex items-center gap-4">
             {
                 listSocial.map((item) => (
-                    <li key={item.url}>
-                        <a href={item.url} target="_blank" className="hover:text-secondary">
-                            {item.icon}
-                        </a>
-                    </li>
+                    <a key={item.url} href={item.url} target="_blank" className="text-white hover:text-primary transition-colors">
+                        {item.icon}
+                    </a>
                 ))
             }
-        </ul>
+        </div>
     )
 }

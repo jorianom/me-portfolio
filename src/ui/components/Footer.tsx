@@ -1,43 +1,44 @@
-import { PiGithubLogoLight, PiWhatsappLogoLight } from "react-icons/pi"
+import {
+  FaGithub,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaEnvelope,
+} from "react-icons/fa6";
+
+const socialLinks = [
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/jorianom/", icon: FaLinkedinIn },
+  { label: "GitHub", href: "https://github.com/jorianom", icon: FaGithub },
+  { label: "WhatsApp", href: "https://wa.me/573205802499", icon: FaWhatsapp },
+  { label: "Email", href: "mailto:jjrianom@unal.edu.co", icon: FaEnvelope },
+];
 
 export const Footer = () => {
-    return (
-        <div className="flex flex-col p-5 items-center justify-center text-white">
-            <hr className="px-1 w-full pt-3 border-secondary" />
-            <div className="flex space-x-4">
-                <a
-                    target="_blank"
-                    href="https://wa.me/573205802499"
-                    aria-label="link"
-                    className="hover:text-accent"
-                >
-                    <PiWhatsappLogoLight className="h-7 w-7" />
-                </a>
-                <a
-                    href="https://github.com/jorianom"
-                    aria-label="link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-accent"
-                >
-                    <PiGithubLogoLight className="h-7 w-7" />
-                </a>
-                {/* <a
-                    href="https://github.com/jorianom"
-                    aria-label="link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:text-accent"
-                >
-                    <CiMail className="h-7 w-7" />
-                </a> */}
-            </div>
-            <div className="text-center">
-                <p>&copy; 2025 John Riaño</p>
-                <p>All Rights Reserved</p>
-                <a target="_blank" href="https://github.com/jorianom"
-                >made by <span className="text-white hover:text-accent">Jorianom</span></a>
-            </div>
+  return (
+    <footer className="mt-10 border-t border-white/5 py-10">
+      <div className="flex flex-col items-center gap-5">
+        {/* Social icons */}
+        <div className="flex items-center gap-3">
+          {socialLinks.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={s.label}
+              className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/5 border border-white/5
+                         text-slate-400 hover:text-primary hover:border-primary/30 hover:bg-primary/10
+                         transition-all"
+            >
+              <s.icon size={16} />
+            </a>
+          ))}
         </div>
-    )
-}
+
+        {/* Bottom line */}
+        <div className="flex items-center gap-2 text-xs text-slate-500 font-mono">
+          <span>&copy; {new Date().getFullYear()} John Riaño · Bogotá, Colombia</span>
+        </div>
+      </div>
+    </footer>
+  );
+};

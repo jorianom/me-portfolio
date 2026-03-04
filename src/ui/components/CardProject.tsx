@@ -17,8 +17,8 @@ export const CardProject = ({ index, total, item }: CardProjectProps) => {
     const isFirst = index == 1;
     const isLast = index == total;
 
-    const styleCardImage = `relative border-secondary border-2 border-l-0 border-b-0  aspect-square ${isFirst ? 'border-secondary border-y-0 rounded-tr-sm' : ''} ${isLast ? 'rounded-lr-sm' : ''}`
-    const styleCardDiv = `relative border-secondary relative flex w-full items-end border-2 border-l-0 border-b-0 aspect-square ${isFirst ? 'border-secondary border-y-0 rounded-tl-sm' : ''} ${isLast ? 'rounded-bl-sm' : ''}`
+    const styleCardImage = `relative border-primary border-2 border-l-0 border-b-0  aspect-square ${isFirst ? 'border-primary border-y-0 rounded-tr-sm' : ''} ${isLast ? 'rounded-lr-sm' : ''}`
+    const styleCardDiv = `relative border-primary relative flex w-full items-end border-2 border-l-0 border-b-0 aspect-square ${isFirst ? 'border-primary border-y-0 rounded-tl-sm' : ''} ${isLast ? 'rounded-bl-sm' : ''}`
     return (
         <>{
             isOdd ?

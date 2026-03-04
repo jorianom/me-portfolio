@@ -20,7 +20,7 @@ export const ButtonNav = () => {
     }, [])
 
     return (
-        <div ref={menuRef} className="flex border border-secondary text-white rounded-lg py-2 uppercase">
+        <div ref={menuRef} className="flex border border-primary text-white rounded-lg py-2 uppercase">
             <div className="flex w-full justify-center">
                 <ul className="flex-col text-right gap-1">
                     <li>
