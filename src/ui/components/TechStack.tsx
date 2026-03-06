@@ -44,7 +44,7 @@ export const TechStack = () => {
     return (
         <section className="py-8 border-b border-white/5">
             <h2 className="mb-8 text-3xl font-black text-white">
-                Tech Stack
+                Tecnologías
             </h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 {categories.map((cat) => {

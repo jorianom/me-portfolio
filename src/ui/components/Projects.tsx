@@ -15,28 +15,22 @@ type Project = {
 
 const projects: Project[] = [
     {
-        title: "Ecommerce Seed House",
-        description: "Tienda virtual minimalista para productos agrícolas, desarrollada con Next.js. Optimizada para rendimiento, responsiva y fácil de escalar.",
+        title: "Pódium Académico",
+        description: "Una plataforma de gestión académica para instituciones educativas, construida con Next.js y Node.js. Permite administrar cursos, estudiantes y profesores con una interfaz intuitiva y funcionalidades robustas.",
         image: "/project_1.webp",
-        url: "https://github.com/jorianom",
+        url: "https://podium-academico.vercel.app/",
     },
     {
         title: "Uploader NetSuite",
         description: "Una extensión para Visual Studio Code diseñada para facilitar la carga y sincronización de scripts en NetSuite directamente desde el editor.",
         image: "/project_2.webp",
-        url: "https://github.com/jorianom",
+        url: "https://marketplace.visualstudio.com/items?itemName=jorianom.uploader-netsuite",
     },
     {
-        title: "UNBiters",
-        description: "Plataforma social diseñada para dinamizar el comercio informal universitario, promoviendo las ventas en las tradicionales 'chazas' del campus.",
+        title: "Ecommerce Seed House",
+        description: "Tienda virtual minimalista para productos agrícolas, desarrollada con Next.js. Optimizada para rendimiento, responsiva y fácil de escalar.",
         image: "/project_3.webp",
-        url: "https://github.com/jorianom",
-    },
-    {
-        title: "Secure-Vote",
-        description: "Sistema simulado de votación electrónica que emplea el algoritmo DSA para asegurar integridad y autenticación de los votos.",
-        image: "/project_4.webp",
-        url: "https://github.com/jorianom",
+        url: "https://ecommerce-seed-house.vercel.app/",
     },
 ]
 

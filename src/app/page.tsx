@@ -2,6 +2,7 @@ import { ProfileCard } from "@/ui/components/ProfileCard";
 import { Navbar } from "@/ui/components/Navbar";
 import { TechStack } from "@/ui/components/TechStack";
 import { Projects } from "@/ui/components/Projects";
+import { Services } from "@/ui/components/Services";
 import { Experience } from "@/ui/components/Experience";
 import { Education } from "@/ui/components/Education";
 import { Footer } from "@/ui/components/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
         <ProfileCard />
         <TechStack />
         <Projects />
+        <Services />
         <Experience />
         <Education />
         <Badge />
